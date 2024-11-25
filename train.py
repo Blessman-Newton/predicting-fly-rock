@@ -1,6 +1,8 @@
 # %%
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
@@ -23,6 +25,18 @@ df.duplicated().sum()
 
 # %%
 df.drop_duplicates()
+
+# Create scatter plot
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x=df.powder_factor, y=df.mean_fragment_sizes)
+
+# Add title and labels
+plt.title('Powder Factor vs. Mean Fragment Size')
+plt.xlabel('Powder Factor')
+plt.ylabel('Mean Fragment Size')
+
+# Show plot
+plt.show()
 
 # %%
 from sklearn.pipeline import Pipeline
