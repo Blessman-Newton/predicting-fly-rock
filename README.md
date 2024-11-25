@@ -57,6 +57,8 @@ cd predicting-fly-rock
 
 ## Usage
 
+...
+
 - To train the model, run:
     ```sh
     python train.py
@@ -64,6 +66,12 @@ cd predicting-fly-rock
 - To make predictions, run:
     ```sh
     python predict.py
+
+- To start the Docker container, run:
+    ```sh
+    docker build -t my-flask-app .
+    docker run -p 5000:5000 my-flask-app
+    ```
     ```
 
 ## Files
